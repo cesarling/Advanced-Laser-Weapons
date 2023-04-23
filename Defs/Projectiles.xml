@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseBullet">
+    <defName>VPE_ChainShot</defName>
+    <label>chain bolt</label>
+    <thingClass>VFEMech.TeslaProjectile</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <texPath>Effects/heavy_turret_prototype.fx.projectile</texPath>
+      <graphicClass>Graphic_Flicker</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <speed>70</speed>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+    <modExtensions>
+      <li Class="VFEMech.TeslaChainingProps">
+        <maxBounceCount>2000</maxBounceCount>
+        <damageDef>Bullet</damageDef>
+        <explosionDamageDef>Stun</explosionDamageDef>
+        <impactRadius>4</impactRadius>
+        <targetFriendly>false</targetFriendly>
+        <addFire>true</addFire>
+        <bounceRange>40</bounceRange>
+        <maxLifetime>40</maxLifetime>
+        <impactSound>VPE_ChainBolt_Impact</impactSound>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>VPE_LaserBlast</defName>
+    <label>Laser blast</label>
+    <thingClass>VFECore.BeamProjectile</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <texPath>Effects/Conflagrator/EyeBlastFirebeam/EyeBlastFirebeam</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 0.5)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>LaserBlast</damageDef>
+      <speed>1000</speed>
+      <ai_IsIncendiary>false</ai_IsIncendiary>
+      <damageAmountBase>15</damageAmountBase>
+      <explosionRadius>2</explosionRadius>
+      <soundExplode>VPE_ChainBolt_Impact</soundExplode>
+    </projectile>
+    <modExtensions>
+      <li Class="VFECore.ProjectileExtension">
+        <flashIntensity>7</flashIntensity>
+        <hitFleck>LaserBlast_Fleck</hitFleck>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet" Name="BaseBeam" Abstract="True">
+    <defName>BaseBeam</defName>
+    <label>Base beam</label>
+    <thingClass>VFECore.BeamProjectile</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBeam">
+    <defName>ChainBeam</defName>
+    <label>chain Beam</label>
+    <thingClass>VFEMech.TeslaProjectile</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <texPath>Effects/Conflagrator/EyeBlastFirebeam/EyeBlastFirebeam</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.1, 0.5)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>LaserBlast</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <explosionRadius>2</explosionRadius>
+      <speed>700</speed>
+      <ai_IsIncendiary>false</ai_IsIncendiary>
+    </projectile>
+    <modExtensions>
+      <li Class="VFEMech.TeslaChainingProps">
+        <maxBounceCount>2000</maxBounceCount>
+        <damageDef>LaserBlast</damageDef>
+        <!-- <explosionDamageDef>LaserBlast</explosionDamageDef>
+				<impactRadius>4</impactRadius> -->
+        <targetFriendly>false</targetFriendly>
+        <addFire>false</addFire>
+        <bounceRange>20</bounceRange>
+        <maxLifetime>10</maxLifetime>
+        <impactSound>VPE_ChainBolt_Impact</impactSound>
+      </li>
+      <li Class="VFECore.ProjectileExtension">
+        <flashIntensity>1</flashIntensity>
+        <hitFleck>LaserBlast_Fleck</hitFleck>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  
+  <DamageDef Name="LaserBlast">
+    <defName>LaserBlast</defName>
+    <label>LaserBlast</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been shot to death.</deathMessage>
+    <hediff>Gunshot</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Heat</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <defaultDamage>1</defaultDamage>
+    <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+    <!-- <explosionCellFleck>BlastEMP</explosionCellFleck> -->
+    <explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
+    <!-- <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck> -->
+    <soundExplosion>Explosion_EMP_Quiet</soundExplosion>
+  </DamageDef>
+  
+  <FleckDef ParentName="FleckBase">
+    <defName>LaserBlast_Fleck</defName>
+    <solidTime>0.3</solidTime>
+    <fadeOutTime>0.1</fadeOutTime>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <graphicData Class="VanillaPsycastsExpanded.Graphics.GraphicData_Animated">
+      <texPath>Effects/Small_Explosion</texPath>
+      <ticksPerFrame>5</ticksPerFrame>
+      <graphicClass>VanillaPsycastsExpanded.Graphics.Graphic_Fleck_Animated</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>(2, 2)</drawSize>
+    </graphicData>
+  </FleckDef>
+  
+  <SoundDef>
+    <defName>Explosion_EMP_Quiet</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Artillery/EMPExplosion_01d</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>10~30</volumeRange>
+        <pitchRange>0.8~1.15</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>
