@@ -102,6 +102,43 @@
     </modExtensions>
   </ThingDef>
 
+    <ThingDef ParentName="BaseBeam">
+    <defName>ChainBoom</defName>
+    <label>chain Boom</label>
+    <thingClass>VFEMech.TeslaProjectile</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <texPath>VFX/light_turret_prototype.fx.projectile</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.1, 0.5)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>LaserBlast</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <explosionRadius>2</explosionRadius>
+      <speed>700</speed>
+      <ai_IsIncendiary>false</ai_IsIncendiary>
+    </projectile>
+    <modExtensions>
+      <li Class="VFEMech.TeslaChainingProps">
+        <maxBounceCount>2000</maxBounceCount>
+        <damageDef>EMP</damageDef>
+        <explosionDamageDef>LaserBlast</explosionDamageDef>
+				<impactRadius>4</impactRadius>
+        <targetFriendly>false</targetFriendly>
+        <addFire>false</addFire>
+        <bounceRange>20</bounceRange>
+        <maxLifetime>10</maxLifetime>
+        <impactSound>Explosion_EMP_Quiet</impactSound>
+      </li>
+      <li Class="VFECore.ProjectileExtension">
+        <flashIntensity>1</flashIntensity>
+        <hitFleck>LaserBlast_Fleck</hitFleck>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_UltraGun</defName>
     <label>UltraGun shot</label>

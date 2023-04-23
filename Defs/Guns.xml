@@ -7,7 +7,7 @@
     <description>A pulse-charged rail-assisted lance weapon. It fires a three shots at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
-      <texPath>Things/UltraGun</texPath>
+      <texPath>Things/PlaceHolderGuns/SDGunTest1</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_ChargeLance</soundInteract>
@@ -80,7 +80,7 @@
     <description>A pulse-charged rail-assisted lance weapon. It fires a three shots at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
-      <texPath>Things/SDGun1</texPath>
+      <texPath>Things/PlaceHolderGuns/SDGunTest2</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_ChargeLance</soundInteract>
@@ -154,7 +154,7 @@
     <description>A pulse-charged rail-assisted lance weapon. It fires a three shots at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
-      <texPath>Things/SDGun4_test</texPath>
+      <texPath>Things/PlaceHolderGuns/SDGunTest3</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_ChargeLance</soundInteract>
