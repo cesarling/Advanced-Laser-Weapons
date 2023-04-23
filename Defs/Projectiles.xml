@@ -37,7 +37,7 @@
     <thingClass>VFECore.BeamProjectile</thingClass>
     <drawOffscreen>true</drawOffscreen>
     <graphicData>
-      <texPath>Effects/Conflagrator/EyeBlastFirebeam/EyeBlastFirebeam</texPath>
+      <texPath>VFX/light_turret_prototype.fx.projectile</texPath>
       <shaderType>MoteGlow</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1, 0.5)</drawSize>
@@ -71,7 +71,7 @@
     <thingClass>VFEMech.TeslaProjectile</thingClass>
     <drawOffscreen>true</drawOffscreen>
     <graphicData>
-      <texPath>Effects/Conflagrator/EyeBlastFirebeam/EyeBlastFirebeam</texPath>
+      <texPath>VFX/light_turret_prototype.fx.projectile</texPath>
       <shaderType>MoteGlow</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(0.1, 0.5)</drawSize>
@@ -93,13 +93,30 @@
         <addFire>false</addFire>
         <bounceRange>20</bounceRange>
         <maxLifetime>10</maxLifetime>
-        <impactSound>VPE_ChainBolt_Impact</impactSound>
+        <impactSound>Explosion_EMP_Quiet</impactSound>
       </li>
       <li Class="VFECore.ProjectileExtension">
         <flashIntensity>1</flashIntensity>
         <hitFleck>LaserBlast_Fleck</hitFleck>
       </li>
     </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_UltraGun</defName>
+    <label>UltraGun shot</label>
+    <graphicData>
+      <texPath>VFX/light_turret_prototype.fx.projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>35</damageAmountBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>120</speed>
+    </projectile>
   </ThingDef>
   
   <DamageDef Name="LaserBlast">

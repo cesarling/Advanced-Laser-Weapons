@@ -73,22 +73,6 @@
       </li>
     </tools>
   </ThingDef>
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_UltraGun</defName>
-    <label>UltraGun shot</label>
-    <graphicData>
-      <texPath>Things/UltraGunShot</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-      <drawSize>1.2</drawSize>
-    </graphicData>
-    <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>35</damageAmountBase>
-      <stoppingPower>1.5</stoppingPower>
-      <speed>120</speed>
-    </projectile>
-  </ThingDef>
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_LaserBlaster</defName>
