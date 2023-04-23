@@ -6,7 +6,7 @@
     <thingClass>VFEMech.TeslaProjectile</thingClass>
     <drawOffscreen>true</drawOffscreen>
     <graphicData>
-      <texPath>Effects/heavy_turret_prototype.fx.projectile</texPath>
+      <texPath>VFX/heavy_turret_prototype.fx.projectile</texPath>
       <graphicClass>Graphic_Flicker</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
@@ -26,7 +26,7 @@
         <addFire>true</addFire>
         <bounceRange>40</bounceRange>
         <maxLifetime>40</maxLifetime>
-        <impactSound>VPE_ChainBolt_Impact</impactSound>
+        <impactSound>Explosion_EMP_Quiet</impactSound>
       </li>
     </modExtensions>
   </ThingDef>
@@ -48,7 +48,7 @@
       <ai_IsIncendiary>false</ai_IsIncendiary>
       <damageAmountBase>15</damageAmountBase>
       <explosionRadius>2</explosionRadius>
-      <soundExplode>VPE_ChainBolt_Impact</soundExplode>
+      <soundExplode>Explosion_EMP_Quiet</soundExplode>
     </projectile>
     <modExtensions>
       <li Class="VFECore.ProjectileExtension">
@@ -145,10 +145,9 @@
     <solidTime>0.3</solidTime>
     <fadeOutTime>0.1</fadeOutTime>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <graphicData Class="VanillaPsycastsExpanded.Graphics.GraphicData_Animated">
-      <texPath>Effects/Small_Explosion</texPath>
+    <graphicData>
+      <texPath>VFX/Small_Explosion</texPath>
       <ticksPerFrame>5</ticksPerFrame>
-      <graphicClass>VanillaPsycastsExpanded.Graphics.Graphic_Fleck_Animated</graphicClass>
       <shaderType>MoteGlow</shaderType>
       <drawSize>(2, 2)</drawSize>
     </graphicData>
