@@ -6,7 +6,7 @@
     <thingClass>VFEMech.TeslaProjectile</thingClass>
     <drawOffscreen>true</drawOffscreen>
     <graphicData>
-      <texPath>VFX/heavy_turret_prototype.fx.projectile</texPath>
+      <texPath>VFX/light_turret_prototype.fx.projectile</texPath>
       <graphicClass>Graphic_Flicker</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
@@ -39,7 +39,7 @@
     <graphicData>
       <texPath>VFX/light_turret_prototype.fx.projectile</texPath>
       <shaderType>MoteGlow</shaderType>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Flicker</graphicClass>
       <drawSize>(1, 0.5)</drawSize>
     </graphicData>
     <projectile>
@@ -73,7 +73,7 @@
     <graphicData>
       <texPath>VFX/light_turret_prototype.fx.projectile</texPath>
       <shaderType>MoteGlow</shaderType>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Flicker</graphicClass>
       <drawSize>(0.1, 0.5)</drawSize>
     </graphicData>
     <projectile>
@@ -110,7 +110,7 @@
     <graphicData>
       <texPath>VFX/light_turret_prototype.fx.projectile</texPath>
       <shaderType>MoteGlow</shaderType>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Flicker</graphicClass>
       <drawSize>(0.1, 0.5)</drawSize>
     </graphicData>
     <projectile>
@@ -144,7 +144,7 @@
     <label>UltraGun shot</label>
     <graphicData>
       <texPath>VFX/light_turret_prototype.fx.projectile</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Flicker</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>1.2</drawSize>
     </graphicData>
@@ -184,7 +184,7 @@
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <graphicData>
       <texPath>VFX/Small_Explosion</texPath>
-      <ticksPerFrame>5</ticksPerFrame>
+      <!-- <ticksPerFrame>5</ticksPerFrame> -->
       <shaderType>MoteGlow</shaderType>
       <drawSize>(2, 2)</drawSize>
     </graphicData>
