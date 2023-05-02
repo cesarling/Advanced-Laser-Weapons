@@ -2,7 +2,7 @@
 <Defs>
 
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>Gun_UltraGun</defName>
+    <defName>ALW_UltraGun</defName>
     <label>UltraGun</label>
     <description>A pulse-charged rail-assisted lance weapon. It fires a three shots at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
     <techLevel>Spacer</techLevel>
@@ -75,7 +75,7 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>Gun_LaserBlaster</defName>
+    <defName>ALW_LaserBlaster</defName>
     <label>LaserBlaster</label>
     <description>A pulse-charged rail-assisted lance weapon. It fires a three shots at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
     <techLevel>Spacer</techLevel>
@@ -149,12 +149,12 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>Gun_ChainBeam</defName>
+    <defName>ALW_ChainBeam</defName>
     <label>ChainBeam</label>
     <description>A pulse-charged rail-assisted lance weapon. It fires a three shots at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
-      <texPath>Things/PlaceHolderGuns/SDGunTest3</texPath>
+      <texPath>Things/PlaceHolderGuns/SDGunBetter2</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_ChargeLance</soundInteract>
@@ -167,7 +167,7 @@
       <AccuracyShort>0.65</AccuracyShort>
       <AccuracyMedium>0.75</AccuracyMedium>
       <AccuracyLong>0.65</AccuracyLong>
-      <RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
       <WorkToMake>900000</WorkToMake>
     </statBases>
     <recipeMaker>

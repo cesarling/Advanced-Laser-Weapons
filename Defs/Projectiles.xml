@@ -6,7 +6,7 @@
     <thingClass>VFEMech.TeslaProjectile</thingClass>
     <drawOffscreen>true</drawOffscreen>
     <graphicData>
-      <texPath>VFX/light_turret_prototype.fx.projectile</texPath>
+      <texPath>Effects/Red_Laser</texPath>
       <graphicClass>Graphic_Flicker</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
@@ -31,16 +31,16 @@
     </modExtensions>
   </ThingDef>
   
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBeam">
     <defName>VPE_LaserBlast</defName>
     <label>Laser blast</label>
-    <thingClass>VFECore.BeamProjectile</thingClass>
+    <thingClass>VFEMech.TeslaProjectile</thingClass>
     <drawOffscreen>true</drawOffscreen>
     <graphicData>
-      <texPath>VFX/light_turret_prototype.fx.projectile</texPath>
+      <texPath>Effects/Red_Laser</texPath>
       <shaderType>MoteGlow</shaderType>
       <graphicClass>Graphic_Flicker</graphicClass>
-      <drawSize>(1, 0.5)</drawSize>
+      <drawSize>(0.1, 0.5)</drawSize>
     </graphicData>
     <projectile>
       <damageDef>LaserBlast</damageDef>
@@ -71,7 +71,7 @@
     <thingClass>VFEMech.TeslaProjectile</thingClass>
     <drawOffscreen>true</drawOffscreen>
     <graphicData>
-      <texPath>VFX/light_turret_prototype.fx.projectile</texPath>
+      <texPath>Effects/Red_Laser</texPath>
       <shaderType>MoteGlow</shaderType>
       <graphicClass>Graphic_Flicker</graphicClass>
       <drawSize>(0.1, 0.5)</drawSize>
@@ -108,7 +108,7 @@
     <thingClass>VFEMech.TeslaProjectile</thingClass>
     <drawOffscreen>true</drawOffscreen>
     <graphicData>
-      <texPath>VFX/light_turret_prototype.fx.projectile</texPath>
+      <texPath>Effects/Red_Laser</texPath>
       <shaderType>MoteGlow</shaderType>
       <graphicClass>Graphic_Flicker</graphicClass>
       <drawSize>(0.1, 0.5)</drawSize>
@@ -143,16 +143,16 @@
     <defName>Bullet_UltraGun</defName>
     <label>UltraGun shot</label>
     <graphicData>
-      <texPath>VFX/light_turret_prototype.fx.projectile</texPath>
+      <texPath>Effects/Red_Laser</texPath>
       <graphicClass>Graphic_Flicker</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
-      <drawSize>1.2</drawSize>
+      <drawSize>0.5</drawSize>
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
       <damageAmountBase>35</damageAmountBase>
-      <stoppingPower>1.5</stoppingPower>
-      <speed>120</speed>
+      <stoppingPower>3.5</stoppingPower>
+      <speed>700</speed>
     </projectile>
   </ThingDef>
   
@@ -183,7 +183,7 @@
     <fadeOutTime>0.1</fadeOutTime>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <graphicData>
-      <texPath>VFX/Small_Explosion</texPath>
+      <texPath>Effects/Small_Explosion/</texPath>
       <!-- <ticksPerFrame>5</ticksPerFrame> -->
       <shaderType>MoteGlow</shaderType>
       <drawSize>(2, 2)</drawSize>
