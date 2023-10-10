@@ -34,7 +34,7 @@
       <displayPriority>210</displayPriority>
     </recipeMaker>
     <costList>
-      <Plasteel>120</Plasteel>
+      <Plasteel>180</Plasteel>
       <ComponentSpacer>9</ComponentSpacer>
     </costList>
     <weaponTags>
@@ -80,7 +80,8 @@
     <description>A pulse-charged rail-assisted lance weapon. It fires a three shots at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
-      <texPath>Things/PlaceHolderGuns/SDGunTest2</texPath>
+      <!-- <texPath>Things/PlaceHolderGuns/SDGunTest2</texPath> -->
+      <texPath>Things/Goofy/Goofy_blaster</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_ChargeLance</soundInteract>
@@ -107,8 +108,8 @@
       <displayPriority>210</displayPriority>
     </recipeMaker>
     <costList>
-      <Plasteel>120</Plasteel>
-      <ComponentSpacer>12</ComponentSpacer>
+      <Plasteel>220</Plasteel>
+      <ComponentSpacer>14</ComponentSpacer>
     </costList>
     <weaponTags>
       <li>MechanoidGunHeavy</li>
@@ -132,7 +133,7 @@
         <soundCast>ChargeLance_Fire</soundCast>
         <!-- <soundCastTail>GunTail_Heavy</soundCastTail> -->
         <muzzleFlashScale>9</muzzleFlashScale>
-        <forcedMissRadius>1.5</forcedMissRadius>
+        <forcedMissRadius>2</forcedMissRadius>
       </li>
     </verbs>
     <tools>
@@ -181,7 +182,7 @@
       <displayPriority>210</displayPriority>
     </recipeMaker>
     <costList>
-      <Plasteel>120</Plasteel>
+      <Plasteel>220</Plasteel>
       <ComponentSpacer>12</ComponentSpacer>
     </costList>
     <weaponTags>
