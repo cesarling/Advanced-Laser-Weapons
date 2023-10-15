@@ -30,114 +30,7 @@
       </li>
     </modExtensions>
   </ThingDef>
-  
-  <ThingDef ParentName="BaseBeam">
-    <defName>VPE_LaserBlast</defName>
-    <label>Laser blast</label>
-    <thingClass>VFEMech.TeslaProjectile</thingClass>
-    <drawOffscreen>true</drawOffscreen>
-    <graphicData>
-      <texPath>Effects/Red_Laser</texPath>
-      <shaderType>MoteGlow</shaderType>
-      <graphicClass>Graphic_Flicker</graphicClass>
-      <drawSize>(0.1, 0.5)</drawSize>
-    </graphicData>
-    <projectile>
-      <damageDef>LaserBlast</damageDef>
-      <speed>1000</speed>
-      <ai_IsIncendiary>false</ai_IsIncendiary>
-      <damageAmountBase>15</damageAmountBase>
-      <explosionRadius>2</explosionRadius>
-      <soundExplode>Explosion_EMP_Quiet</soundExplode>
-    </projectile>
-    <modExtensions>
-      <li Class="VFECore.ProjectileExtension">
-        <flashIntensity>7</flashIntensity>
-        <hitFleck>LaserBlast_Fleck</hitFleck>
-      </li>
-    </modExtensions>
-  </ThingDef>
 
-  <ThingDef ParentName="BaseBullet" Name="BaseBeam" Abstract="True">
-    <defName>BaseBeam</defName>
-    <label>Base beam</label>
-    <thingClass>VFECore.BeamProjectile</thingClass>
-    <drawOffscreen>true</drawOffscreen>
-  </ThingDef>
-
-  <ThingDef ParentName="BaseBeam">
-    <defName>ChainBeam</defName>
-    <label>chain Beam</label>
-    <thingClass>VFEMech.TeslaProjectile</thingClass>
-    <drawOffscreen>true</drawOffscreen>
-    <graphicData>
-      <texPath>Effects/Red_Laser</texPath>
-      <shaderType>MoteGlow</shaderType>
-      <graphicClass>Graphic_Flicker</graphicClass>
-      <drawSize>(0.1, 0.5)</drawSize>
-    </graphicData>
-    <projectile>
-      <damageDef>LaserBlast</damageDef>
-      <damageAmountBase>1</damageAmountBase>
-      <explosionRadius>2</explosionRadius>
-      <speed>700</speed>
-      <ai_IsIncendiary>false</ai_IsIncendiary>
-    </projectile>
-    <modExtensions>
-      <li Class="VFEMech.TeslaChainingProps">
-        <maxBounceCount>2000</maxBounceCount>
-        <damageDef>LaserBlast</damageDef>
-        <!-- <explosionDamageDef>LaserBlast</explosionDamageDef>
-				<impactRadius>4</impactRadius> -->
-        <targetFriendly>false</targetFriendly>
-        <addFire>false</addFire>
-        <bounceRange>20</bounceRange>
-        <maxLifetime>10</maxLifetime>
-        <impactSound>Explosion_EMP_Quiet</impactSound>
-      </li>
-      <li Class="VFECore.ProjectileExtension">
-        <flashIntensity>1</flashIntensity>
-        <hitFleck>LaserBlast_Fleck</hitFleck>
-      </li>
-    </modExtensions>
-  </ThingDef>
-
-    <ThingDef ParentName="BaseBeam">
-    <defName>ChainBoom</defName>
-    <label>chain Boom</label>
-    <thingClass>VFEMech.TeslaProjectile</thingClass>
-    <drawOffscreen>true</drawOffscreen>
-    <graphicData>
-      <texPath>Effects/Red_Laser</texPath>
-      <shaderType>MoteGlow</shaderType>
-      <graphicClass>Graphic_Flicker</graphicClass>
-      <drawSize>(0.1, 0.5)</drawSize>
-    </graphicData>
-    <projectile>
-      <damageDef>LaserBlast</damageDef>
-      <damageAmountBase>1</damageAmountBase>
-      <explosionRadius>2</explosionRadius>
-      <speed>700</speed>
-      <ai_IsIncendiary>false</ai_IsIncendiary>
-    </projectile>
-    <modExtensions>
-      <li Class="VFEMech.TeslaChainingProps">
-        <maxBounceCount>2000</maxBounceCount>
-        <damageDef>EMP</damageDef>
-        <explosionDamageDef>LaserBlast</explosionDamageDef>
-				<impactRadius>4</impactRadius>
-        <targetFriendly>false</targetFriendly>
-        <addFire>false</addFire>
-        <bounceRange>20</bounceRange>
-        <maxLifetime>10</maxLifetime>
-        <impactSound>Explosion_EMP_Quiet</impactSound>
-      </li>
-      <li Class="VFECore.ProjectileExtension">
-        <flashIntensity>1</flashIntensity>
-        <hitFleck>LaserBlast_Fleck</hitFleck>
-      </li>
-    </modExtensions>
-  </ThingDef>
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_UltraGun</defName>
@@ -146,16 +39,61 @@
       <texPath>Effects/Red_Laser</texPath>
       <graphicClass>Graphic_Flicker</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
-      <drawSize>0.5</drawSize>
+      <!-- <drawSize>0.5</drawSize> -->
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>35</damageAmountBase>
+      <damageAmountBase>28</damageAmountBase>
       <stoppingPower>3.5</stoppingPower>
-      <speed>700</speed>
+      <speed>400</speed>
     </projectile>
   </ThingDef>
-  
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_SolarScorchCannon</defName>
+    <label>Solar Scorch Cannon Bullet</label>
+    <thingClass>Projectile_HellsphereCannon</thingClass>
+    <graphicData>
+      <texPath>Effects/Small_Explosion</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <graphicClass>Graphic_Flicker</graphicClass>
+      <drawSize>(2, 2)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Mini_Vaporize</damageDef>
+      <speed>45</speed>
+      <explosionRadius>1.9</explosionRadius>
+      <screenShakeFactor>1.5</screenShakeFactor>
+    </projectile>
+  </ThingDef>
+
+  <DamageDef>
+    <defName>Mini_Vaporize</defName>
+    <label>vaporize</label>
+    <workerClass>DamageWorker_Vaporize</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been vaporized by extreme heat.</deathMessage>
+    <hediff>Burn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <defaultDamage>10</defaultDamage>
+    <defaultStoppingPower>1.5</defaultStoppingPower>
+    <defaultArmorPenetration>1</defaultArmorPenetration>
+    <buildingDamageFactorImpassable>8</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>4</buildingDamageFactorPassable>
+    <plantDamageFactor>4</plantDamageFactor>
+    <explosionHeatEnergyPerCell>10</explosionHeatEnergyPerCell>
+    <explosionCellFleck>Fleck_Mini_Vaporize</explosionCellFleck>
+    <armorCategory>Heat</armorCategory>
+    <minDamageToFragment>15</minDamageToFragment>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <explosionColorCenter>(1, 1, 1)</explosionColorCenter>
+    <explosionColorEdge>(0.6, 0.5, 0.4)</explosionColorEdge>
+    <soundExplosion>Explosion_Mini_Vaporize</soundExplosion>
+    <expolosionPropagationSpeed>0.3</expolosionPropagationSpeed>
+    <hasForcefulImpact>true</hasForcefulImpact>
+    <corpseDamageFactor>0.1</corpseDamageFactor>
+  </DamageDef>
+
   <DamageDef Name="LaserBlast">
     <defName>LaserBlast</defName>
     <label>LaserBlast</label>
@@ -176,20 +114,65 @@
     <!-- <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck> -->
     <soundExplosion>Explosion_EMP_Quiet</soundExplosion>
   </DamageDef>
+
   
+  
+  <!--THIS IS FOR THE BULLET NOT AN EXPLOSION / bullet projectile for ultra gun -->
   <FleckDef ParentName="FleckBase">
     <defName>LaserBlast_Fleck</defName>
-    <solidTime>0.3</solidTime>
+    <solidTime>0.5</solidTime>
     <fadeOutTime>0.1</fadeOutTime>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <graphicData>
-      <texPath>Effects/Small_Explosion/</texPath>
-      <!-- <ticksPerFrame>5</ticksPerFrame> -->
-      <shaderType>MoteGlow</shaderType>
-      <drawSize>(2, 2)</drawSize>
+      <texPath>Effects/Red_Laser/projectile7-2</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+			<renderInstanced>true</renderInstanced>
     </graphicData>
   </FleckDef>
+
+  <!-- <FleckDef ParentName="FleckBase_Thrown">
+    <defName>BloodborneRemake_SparkYellow</defName>
+    <graphicData>
+      <texPath>Effects/BloodborneRemake_SparkYellow</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.05</fadeInTime>
+    <solidTime>0.05</solidTime>
+    <fadeOutTime>0.3</fadeOutTime>
+  </FleckDef> -->
   
+  <FleckDef ParentName="FleckBase_RandomGraphic">
+    <defName>Fleck_Mini_Vaporize</defName>
+    <randomGraphics>
+      <li>
+        <graphicClass>Graphic_Fleck</graphicClass>
+        <texPath>Effects/Small_Explosion/Explosion1</texPath>
+        <shaderType>MoteGlow</shaderType>
+        <renderInstanced>true</renderInstanced>
+        <drawSize>(1.52, 1.52)</drawSize>
+      </li>
+      <li>
+        <graphicClass>Graphic_Fleck</graphicClass>
+        <texPath>Effects/Small_Explosion/Explosion2</texPath>
+        <shaderType>MoteGlow</shaderType>
+        <renderInstanced>true</renderInstanced>
+        <drawSize>(1.52, 1.52)</drawSize>
+      </li>
+      <li>
+        <graphicClass>Graphic_Fleck</graphicClass>
+        <texPath>Effects/Small_Explosion/Explosion3</texPath>
+        <shaderType>MoteGlow</shaderType>
+        <renderInstanced>true</renderInstanced>
+        <drawSize>(1.52, 1.52)</drawSize>
+      </li>
+    </randomGraphics>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.25</fadeInTime>
+    <solidTime>0.3</solidTime>
+    <fadeOutTime>0.7</fadeOutTime>
+  </FleckDef>
+
   <SoundDef>
     <defName>Explosion_EMP_Quiet</defName>
     <context>MapOnly</context>
@@ -206,4 +189,101 @@
       </li>
     </subSounds>
   </SoundDef>
+
+  <SoundDef>
+    <defName>Explosion_Mini_Vaporize</defName>  
+    <sustain>false</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>   
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapons/Laser1</clipPath>
+          </li>
+        </grains>      
+        <pitchRange>0.99~1.01</pitchRange>
+        <volumeRange>35~55</volumeRange>
+        <sustainAttack>2.5</sustainAttack>      
+        <sustainRelease>2.5</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Shot_SolarScorchCannon</defName>
+    <sustain>false</sustain> 
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode> 
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused> 
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapons/Laser2</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+  <SoundDef>
+    <defName>Shot_ChargedLaser</defName>
+    <sustain>false</sustain> 
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode> 
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused> 
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapons/Laser3</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Shot_PhotonModulator</defName>
+    <sustain>false</sustain> 
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode> 
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused> 
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapons/Laser4</clipPath>
+          </li>
+        </grains>
+        <volumeRange>10~20</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- <SoundDef>
+    <defName>GunTail_SolarScorchCannon</defName>  
+    <context>MapOnly</context> 
+    <maxVoices>2</maxVoices>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/LaserTwo</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>38.23529~37.05882</volumeRange>      
+        <pitchRange>0.9082352~1.091765</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef> -->
 </Defs>

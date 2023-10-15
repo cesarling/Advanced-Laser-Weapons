@@ -18,8 +18,8 @@
       <Mass>10</Mass>
       <AccuracyTouch>0.65</AccuracyTouch>
       <AccuracyShort>0.85</AccuracyShort>
-      <AccuracyMedium>0.85</AccuracyMedium>
-      <AccuracyLong>0.95</AccuracyLong>
+      <AccuracyMedium>0.95</AccuracyMedium>
+      <AccuracyLong>0.90</AccuracyLong>
       <RangedWeapon_Cooldown>2.7</RangedWeapon_Cooldown>
       <WorkToMake>900000</WorkToMake>
     </statBases>
@@ -34,15 +34,15 @@
       <displayPriority>210</displayPriority>
     </recipeMaker>
     <costList>
-      <Plasteel>120</Plasteel>
+      <Plasteel>180</Plasteel>
       <ComponentSpacer>9</ComponentSpacer>
     </costList>
     <weaponTags>
-      <li>MechanoidGunHeavy</li>
       <li>SpacerGun</li>
     </weaponTags>
     <tradeTags>
       <li>WeaponRanged</li>
+      <li>Exotic</li>
     </tradeTags>
     <weaponClasses>
       <li>RangedHeavy</li>
@@ -52,8 +52,8 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_UltraGun</defaultProjectile>
-        <warmupTime>2.7</warmupTime>
-        <range>25.2</range>
+        <warmupTime>1.7</warmupTime>
+        <range>35.2</range>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
         <soundCast>ChargeLance_Fire</soundCast>
@@ -80,7 +80,8 @@
     <description>A pulse-charged rail-assisted lance weapon. It fires a three shots at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
-      <texPath>Things/PlaceHolderGuns/SDGunTest2</texPath>
+      <!-- <texPath>Things/PlaceHolderGuns/SDGunTest2</texPath> -->
+      <texPath>Things/Real/ScifiGun1</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_ChargeLance</soundInteract>
@@ -107,15 +108,15 @@
       <displayPriority>210</displayPriority>
     </recipeMaker>
     <costList>
-      <Plasteel>120</Plasteel>
-      <ComponentSpacer>12</ComponentSpacer>
+      <Plasteel>220</Plasteel>
+      <ComponentSpacer>14</ComponentSpacer>
     </costList>
     <weaponTags>
-      <li>MechanoidGunHeavy</li>
       <li>SpacerGun</li>
     </weaponTags>
     <tradeTags>
       <li>WeaponRanged</li>
+      <li>Exotic</li>
     </tradeTags>
     <weaponClasses>
       <li>RangedHeavy</li>
@@ -132,7 +133,7 @@
         <soundCast>ChargeLance_Fire</soundCast>
         <!-- <soundCastTail>GunTail_Heavy</soundCastTail> -->
         <muzzleFlashScale>9</muzzleFlashScale>
-        <forcedMissRadius>1.5</forcedMissRadius>
+        <forcedMissRadius>2</forcedMissRadius>
       </li>
     </verbs>
     <tools>
@@ -151,10 +152,10 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>ALW_ChainBeam</defName>
     <label>ChainBeam</label>
-    <description>A pulse-charged rail-assisted lance weapon. It fires a three shots at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
+    <description>A futuristic laser weapon firing three beams that unleash chain lightning, wreaking havoc on distant enemies with relentless energy.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
-      <texPath>Things/PlaceHolderGuns/SDGunBetter2</texPath>
+      <texPath>Things/Real/Starcraft2MarineGun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_ChargeLance</soundInteract>
@@ -181,15 +182,15 @@
       <displayPriority>210</displayPriority>
     </recipeMaker>
     <costList>
-      <Plasteel>120</Plasteel>
+      <Plasteel>220</Plasteel>
       <ComponentSpacer>12</ComponentSpacer>
     </costList>
     <weaponTags>
-      <li>MechanoidGunHeavy</li>
       <li>SpacerGun</li>
     </weaponTags>
     <tradeTags>
       <li>WeaponRanged</li>
+      <li>Exotic</li>
     </tradeTags>
     <weaponClasses>
       <li>RangedHeavy</li>
@@ -203,7 +204,7 @@
         <range>35.6</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
-        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCast>Shot_ChargedLaser</soundCast>
         <!-- <soundCastTail>GunTail_Heavy</soundCastTail> -->
         <muzzleFlashScale>14</muzzleFlashScale>
         <forcedMissRadius>0</forcedMissRadius>
@@ -220,5 +221,356 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>ALW_ChainBoomer</defName>
+    <label>ChainBoomer</label>
+    <description>Firing three electrifying lasers with chain lightning, this not only inflicts relentless damage to distant foes but also culminates in explosive annihilation upon impact.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/PlaceHolderGuns/SDGunTest1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeLance</soundInteract>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>10</Mass>
+      <AccuracyTouch>0.25</AccuracyTouch>
+      <AccuracyShort>0.35</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.30</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+      <WorkToMake>900000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ChargedShot</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <displayPriority>210</displayPriority>
+    </recipeMaker>
+    <costList>
+      <Plasteel>130</Plasteel>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <weaponTags>
+      <li>SpacerGun</li>
+    </weaponTags>
+    <tradeTags>
+      <li>WeaponRanged</li>
+      <li>Exotic</li>
+    </tradeTags>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ChainBoom</defaultProjectile>
+        <warmupTime>2</warmupTime>
+        <range>35.2</range>
+        <burstShotCount>7</burstShotCount>
+        <ticksBetweenBurstShots>35</ticksBetweenBurstShots>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>ALW_SolarScorchCannon</defName>
+    <label>Solar Scorch Cannon</label>
+    <description>With each shot, the incendiary shell of this futuristic firearm erupts into a mesmerizing giant fireball, harnessing the power of a miniature sun.</description>
+    <techLevel>Spacer</techLevel>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <!-- <texPath>Things/PlaceHolderGuns/SDGunTest2</texPath> -->
+      <texPath>Things/Real/ScifiGun2</texPath>
+      <drawSize>(1.2, 1.2)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Shot_SolarScorchCannon</soundInteract>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>20</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.25</AccuracyLong>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+      <WorkToMake>1800000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ChargedShot</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <displayPriority>210</displayPriority>
+    </recipeMaker>
+    <costList>
+      <Shell_Incendiary>36</Shell_Incendiary>
+      <Steel>180</Steel>
+      <Plasteel>220</Plasteel>
+      <ComponentSpacer>18</ComponentSpacer>
+    </costList>
+    <weaponTags>
+      <li>SpacerGun</li>
+    </weaponTags>
+    <tradeTags>
+      <li>WeaponRanged</li>
+      <li>Exotic</li>
+    </tradeTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_SolarScorchCannon</defaultProjectile>
+        <warmupTime>7.5</warmupTime>
+        <range>18.9</range>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
+        <ai_RangedAlawaysShootGroundBelowTarget>true</ai_RangedAlawaysShootGroundBelowTarget>
+        <ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <ai_TargetHasRangedAttackScoreOffset>50</ai_TargetHasRangedAttackScoreOffset>
+        <minRange>5.9</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>false</canTargetPawns>
+        </targetParams>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>45</ticksBetweenBurstShots>
+        <beamTargetsGround>true</beamTargetsGround>
+        <canGoWild>false</canGoWild>
+        <soundCast>Shot_SolarScorchCannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>8.66</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+      <li Class="MVCF.Comps.CompProperties_VerbProps">
+        <compClass>MVCF.Comps.Comp_VerbProps</compClass>
+        <verbProps>
+          <li>
+            <label>Solar Scorch Cannon</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                <MaxShots>36</MaxShots>
+                <AmmoFilter>
+                  <thingDefs>
+                    <li>Shell_Incendiary</li>
+                  </thingDefs>
+                </AmmoFilter>
+                <ItemsPerShot>3</ItemsPerShot>
+                <ReloadTimePerShot>0.3</ReloadTimePerShot>
+                <ReloadSound>Interact_Rifle</ReloadSound>
+                <StartLoaded>true</StartLoaded>
+              </li>
+            </comps>
+          </li>
+        </verbProps>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>ALW_PhotonModulator</defName>
+    <label>Photon Modulator</label>
+    <description>A cutting-edge firearm with laser tech that adapts projectiles instantly based on target distance, ensuring precision from energy bursts to high-velocity shots.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Real/ScifiGun3</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.8, 0.8)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <Mass>4.6</Mass>
+      <AccuracyTouch>0.55</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>4.00</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ChargedShot</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <displayPriority>210</displayPriority>
+    </recipeMaker>
+    <costList>
+      <Shell_Incendiary>36</Shell_Incendiary>
+      <Steel>180</Steel>
+      <Plasteel>220</Plasteel>
+      <ComponentSpacer>18</ComponentSpacer>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>PhotonModulatorUltraLongRange</defaultProjectile>
+        <warmupTime>0.1</warmupTime>
+        <range>50</range>
+        <minRange>40</minRange>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_PhotonModulator</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <label>Ultra-Long Range</label>
+      </li>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>PhotonModulatorLongRange</defaultProjectile>
+        <warmupTime>0.1</warmupTime>
+        <range>39.99</range>
+        <minRange>30</minRange>
+        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>Shot_PhotonModulator</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <label>Long Range</label>
+      </li>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>PhotonModulatorMediumRange</defaultProjectile>
+        <warmupTime>0.1</warmupTime>
+        <range>29.99</range>
+        <minRange>10</minRange>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <soundCast>Shot_PhotonModulator</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <label>Medium Range</label>
+      </li>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>PhotonModulatorShortRange</defaultProjectile>
+        <warmupTime>0.1</warmupTime>
+        <range>9.99</range>
+        <minRange>5</minRange>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <burstShotCount>15</burstShotCount>
+        <soundCast>Shot_PhotonModulator</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <label>Short Range</label>
+      </li>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>PhotonModulatorAlmostMeleeRange</defaultProjectile>
+        <warmupTime>0.1</warmupTime>
+        <range>4.99</range>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <burstShotCount>20</burstShotCount>
+        <soundCast>Shot_PhotonModulator</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <label>Almost Melee Range</label>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Laser Slash</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>50</power>
+        <cooldownTime>5</cooldownTime>
+      </li>
+    </tools>
+    <comps Inherit="False">
+      <li Class="MVCF.Comps.CompProperties_VerbProps">
+        <compClass>CompEquippable</compClass>
+        <verbProps>
+          <li>
+            <label>Almost Melee Range</label>
+            <canBeToggled>true</canBeToggled>
+            <canFireIndependently>false</canFireIndependently>
+          </li>
+          <li>
+            <label>Short Range</label>
+            <canBeToggled>true</canBeToggled>
+            <canFireIndependently>false</canFireIndependently>
+          </li>
+          <li>
+            <label>Medium Range</label>
+            <canBeToggled>true</canBeToggled>
+            <canFireIndependently>false</canFireIndependently>
+          </li>
+          <li>
+            <label>Long Range</label>
+            <canBeToggled>true</canBeToggled>
+            <canFireIndependently>false</canFireIndependently>
+          </li>
+          <li>
+            <label>Ultra-Long Range</label>
+            <canBeToggled>true</canBeToggled>
+            <canFireIndependently>false</canFireIndependently>
+          </li>
+        </verbProps>
+      </li>
+    </comps>
   </ThingDef>
 </Defs>
