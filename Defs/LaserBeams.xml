@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+ 
+        
+    <ThingDef ParentName="BaseBullet" Name="BaseBeam" Abstract="True">
+        <defName>BaseBeam</defName>
+        <label>Base beam</label>
+        <thingClass>VFECore.BeamProjectile</thingClass>
+        <drawOffscreen>true</drawOffscreen>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBeam">
+        <defName>VPE_LaserBlast</defName>
+        <label>Laser blast</label>
+        <!-- <thingClass>VFEMech.TeslaProjectile</thingClass>
+        <drawOffscreen>true</drawOffscreen> -->
+        <graphicData>
+          <texPath>Effects/LaserBlastBeam</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <projectile>
+          <damageDef>LaserBlast</damageDef>
+          <speed>1000</speed>
+          <ai_IsIncendiary>false</ai_IsIncendiary>
+          <damageAmountBase>15</damageAmountBase>
+          <explosionRadius>2</explosionRadius>
+          <soundExplode>Explosion_EMP_Quiet</soundExplode>
+        </projectile>
+        <!-- <modExtensions>
+          <li Class="VFECore.ProjectileExtension">
+            <flashIntensity>7</flashIntensity>
+            <hitFleck>LaserBlast_Fleck</hitFleck>
+          </li>
+        </modExtensions> -->
+      </ThingDef>
+
+    
+      <ThingDef ParentName="BaseBeam">
+        <defName>ChainBeam</defName>
+        <label>chain Beam</label>
+        <thingClass>VFEMech.TeslaProjectile</thingClass>
+        <drawOffscreen>true</drawOffscreen>
+        <graphicData>
+          <texPath>Effects/Red_Laser</texPath>
+          <shaderType>MoteGlow</shaderType>
+          <graphicClass>Graphic_Flicker</graphicClass>
+          <drawSize>(0.1, 0.5)</drawSize>
+        </graphicData>
+        <projectile>
+          <damageDef>LaserBlast</damageDef>
+          <damageAmountBase>1</damageAmountBase>
+          <explosionRadius>2</explosionRadius>
+          <speed>700</speed>
+          <ai_IsIncendiary>false</ai_IsIncendiary>
+        </projectile>
+        <modExtensions>
+          <li Class="VFEMech.TeslaChainingProps">
+            <maxBounceCount>2000</maxBounceCount>
+            <damageDef>LaserBlast</damageDef>
+            <!-- <explosionDamageDef>LaserBlast</explosionDamageDef>
+                    <impactRadius>4</impactRadius> -->
+            <targetFriendly>false</targetFriendly>
+            <addFire>false</addFire>
+            <bounceRange>20</bounceRange>
+            <maxLifetime>10</maxLifetime>
+            <impactSound>Explosion_EMP_Quiet</impactSound>
+          </li>
+          <li Class="VFECore.ProjectileExtension">
+            <flashIntensity>1</flashIntensity>
+            <hitFleck>LaserBlast_Fleck</hitFleck>
+          </li>
+        </modExtensions>
+      </ThingDef>
+    
+      <ThingDef ParentName="BaseBeam">
+        <defName>ChainBoom</defName>
+        <label>chain Boom</label>
+        <thingClass>VFEMech.TeslaProjectile</thingClass>
+        <drawOffscreen>true</drawOffscreen>
+        <graphicData>
+          <texPath>Effects/Red_Laser</texPath>
+          <shaderType>MoteGlow</shaderType>
+          <graphicClass>Graphic_Flicker</graphicClass>
+          <drawSize>(0.1, 0.5)</drawSize>
+        </graphicData>
+        <projectile>
+          <damageDef>LaserBlast</damageDef>
+          <damageAmountBase>1</damageAmountBase>
+          <explosionRadius>2</explosionRadius>
+          <speed>700</speed>
+          <ai_IsIncendiary>false</ai_IsIncendiary>
+        </projectile>
+        <modExtensions>
+          <li Class="VFEMech.TeslaChainingProps">
+            <maxBounceCount>3</maxBounceCount>
+            <damageDef>EMP</damageDef>
+            <explosionDamageDef>LaserBlast</explosionDamageDef>
+                    <impactRadius>2</impactRadius>
+            <targetFriendly>false</targetFriendly>
+            <addFire>false</addFire>
+            <bounceRange>5</bounceRange>
+            <maxLifetime>1</maxLifetime>
+            <impactSound>Explosion_EMP_Quiet</impactSound>
+          </li>
+          <li Class="VFECore.ProjectileExtension">
+            <flashIntensity>1</flashIntensity>
+            <hitFleck>LaserBlast_Fleck</hitFleck>
+          </li>
+        </modExtensions>
+      </ThingDef>
+
+
+      <ThingDef ParentName="BaseBeam">
+        <defName>PhotonModulatorUltraLongRange</defName>
+        <label>Photon Modulator Ultra Long Range</label>
+        <graphicData>
+          <texPath>Effects/LaserBeam1</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <projectile>
+          <damageDef>LaserBlast</damageDef>
+          <speed>1000</speed>
+          <ai_IsIncendiary>false</ai_IsIncendiary>
+          <damageAmountBase>40</damageAmountBase>
+          <explosionRadius>2</explosionRadius>
+          <soundExplode>Explosion_EMP_Quiet</soundExplode>
+        </projectile>
+        <modExtensions>
+          <li Class="VFECore.ProjectileExtension">
+            <flashIntensity>10</flashIntensity>
+            <hitFleck>Fleck_Random_Explosions</hitFleck>
+          </li>
+        </modExtensions>
+      </ThingDef>
+
+      <ThingDef ParentName="BaseBeam">
+        <defName>PhotonModulatorLongRange</defName>
+        <label>Photon Modulator Long Range</label>
+        <graphicData>
+          <texPath>Effects/LaserBeam2</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <projectile>
+          <damageDef>LaserBlast</damageDef>
+          <speed>1000</speed>
+          <ai_IsIncendiary>false</ai_IsIncendiary>
+          <damageAmountBase>4</damageAmountBase>
+        </projectile>
+        <modExtensions>
+          <li Class="VFECore.ProjectileExtension">
+            <flashIntensity>10</flashIntensity>
+            <hitFleck>Fleck_Random_Explosions</hitFleck>
+          </li>
+        </modExtensions>
+      </ThingDef>
+
+      <ThingDef ParentName="BaseBeam">
+        <defName>PhotonModulatorMediumRange</defName>
+        <label>Photon Modulator Medium Range</label>
+        <graphicData>
+          <texPath>Effects/LaserBeam3</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <projectile>
+          <damageDef>LaserBlast</damageDef>
+          <speed>1000</speed>
+          <ai_IsIncendiary>false</ai_IsIncendiary>
+          <damageAmountBase>3</damageAmountBase>
+        </projectile>
+        <modExtensions>
+          <li Class="VFECore.ProjectileExtension">
+            <flashIntensity>10</flashIntensity>
+            <hitFleck>Fleck_Random_Explosions</hitFleck>
+          </li>
+        </modExtensions>
+      </ThingDef>
+
+      <ThingDef ParentName="BaseBeam">
+        <defName>PhotonModulatorShortRange</defName>
+        <label>Photon Modulator Short Range</label>
+        <graphicData>
+          <texPath>Effects/LaserBeam4</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <projectile>
+          <damageDef>LaserBlast</damageDef>
+          <speed>1000</speed>
+          <ai_IsIncendiary>false</ai_IsIncendiary>
+          <damageAmountBase>2.5</damageAmountBase>
+        </projectile>
+        <modExtensions>
+          <li Class="VFECore.ProjectileExtension">
+            <flashIntensity>10</flashIntensity>
+            <hitFleck>Fleck_Random_Explosions</hitFleck>
+          </li>
+        </modExtensions>
+      </ThingDef>
+
+      <ThingDef ParentName="BaseBeam">
+        <defName>PhotonModulatorAlmostMeleeRange</defName>
+        <label>Photon Modulator Almost Melee Range</label>
+        <graphicData>
+          <texPath>Effects/LaserBeam5</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <projectile>
+          <damageDef>LaserBlast</damageDef>
+          <speed>1000</speed>
+          <ai_IsIncendiary>false</ai_IsIncendiary>
+          <damageAmountBase>2</damageAmountBase>
+        </projectile>
+        <modExtensions>
+          <li Class="VFECore.ProjectileExtension">
+            <flashIntensity>10</flashIntensity>
+            <hitFleck>Fleck_Random_Explosions</hitFleck>
+          </li>
+        </modExtensions>
+      </ThingDef>
+
+      <FleckDef ParentName="FleckBase_RandomGraphic">
+        <defName>Fleck_Random_Explosions</defName>
+        <randomGraphics>
+          <li>
+            <graphicClass>Graphic_Fleck</graphicClass>
+            <texPath>Effects/Explosion1</texPath>
+            <shaderType>MoteGlow</shaderType>
+            <renderInstanced>true</renderInstanced>
+            <drawSize>(1.52, 1.52)</drawSize>
+          </li>
+          <li>
+            <graphicClass>Graphic_Fleck</graphicClass>
+            <texPath>Effects/Explosion2</texPath>
+            <shaderType>MoteGlow</shaderType>
+            <renderInstanced>true</renderInstanced>
+            <drawSize>(1.52, 1.52)</drawSize>
+          </li>
+          <li>
+            <graphicClass>Graphic_Fleck</graphicClass>
+            <texPath>Effects/Explosion3</texPath>
+            <shaderType>MoteGlow</shaderType>
+            <renderInstanced>true</renderInstanced>
+            <drawSize>(1.52, 1.52)</drawSize>
+          </li>
+          <li>
+            <graphicClass>Graphic_Fleck</graphicClass>
+            <texPath>Effects/Explosion4</texPath>
+            <shaderType>MoteGlow</shaderType>
+            <renderInstanced>true</renderInstanced>
+            <drawSize>(1.52, 1.52)</drawSize>
+          </li>
+          <li>
+            <graphicClass>Graphic_Fleck</graphicClass>
+            <texPath>Effects/Explosion5</texPath>
+            <shaderType>MoteGlow</shaderType>
+            <renderInstanced>true</renderInstanced>
+            <drawSize>(1.52, 1.52)</drawSize>
+          </li>
+        </randomGraphics>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <fadeInTime>0.25</fadeInTime>
+        <solidTime>0.2</solidTime>
+        <fadeOutTime>0.25</fadeOutTime>
+      </FleckDef>
+</Defs>

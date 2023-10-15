@@ -30,113 +30,7 @@
       </li>
     </modExtensions>
   </ThingDef>
-  
-  <ThingDef ParentName="BaseBeam">
-    <defName>VPE_LaserBlast</defName>
-    <label>Laser blast</label>
-    <!-- <thingClass>VFEMech.TeslaProjectile</thingClass>
-    <drawOffscreen>true</drawOffscreen> -->
-    <graphicData>
-      <texPath>Effects/LaserBlastBeam</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
-    <projectile>
-      <damageDef>LaserBlast</damageDef>
-      <speed>1000</speed>
-      <ai_IsIncendiary>false</ai_IsIncendiary>
-      <damageAmountBase>15</damageAmountBase>
-      <explosionRadius>2</explosionRadius>
-      <soundExplode>Explosion_EMP_Quiet</soundExplode>
-    </projectile>
-    <!-- <modExtensions>
-      <li Class="VFECore.ProjectileExtension">
-        <flashIntensity>7</flashIntensity>
-        <hitFleck>LaserBlast_Fleck</hitFleck>
-      </li>
-    </modExtensions> -->
-  </ThingDef>
 
-  <ThingDef ParentName="BaseBullet" Name="BaseBeam" Abstract="True">
-    <defName>BaseBeam</defName>
-    <label>Base beam</label>
-    <thingClass>VFECore.BeamProjectile</thingClass>
-    <drawOffscreen>true</drawOffscreen>
-  </ThingDef>
-
-  <ThingDef ParentName="BaseBeam">
-    <defName>ChainBeam</defName>
-    <label>chain Beam</label>
-    <thingClass>VFEMech.TeslaProjectile</thingClass>
-    <drawOffscreen>true</drawOffscreen>
-    <graphicData>
-      <texPath>Effects/Red_Laser</texPath>
-      <shaderType>MoteGlow</shaderType>
-      <graphicClass>Graphic_Flicker</graphicClass>
-      <drawSize>(0.1, 0.5)</drawSize>
-    </graphicData>
-    <projectile>
-      <damageDef>LaserBlast</damageDef>
-      <damageAmountBase>1</damageAmountBase>
-      <explosionRadius>2</explosionRadius>
-      <speed>700</speed>
-      <ai_IsIncendiary>false</ai_IsIncendiary>
-    </projectile>
-    <modExtensions>
-      <li Class="VFEMech.TeslaChainingProps">
-        <maxBounceCount>2000</maxBounceCount>
-        <damageDef>LaserBlast</damageDef>
-        <!-- <explosionDamageDef>LaserBlast</explosionDamageDef>
-				<impactRadius>4</impactRadius> -->
-        <targetFriendly>false</targetFriendly>
-        <addFire>false</addFire>
-        <bounceRange>20</bounceRange>
-        <maxLifetime>10</maxLifetime>
-        <impactSound>Explosion_EMP_Quiet</impactSound>
-      </li>
-      <li Class="VFECore.ProjectileExtension">
-        <flashIntensity>1</flashIntensity>
-        <hitFleck>LaserBlast_Fleck</hitFleck>
-      </li>
-    </modExtensions>
-  </ThingDef>
-
-  <ThingDef ParentName="BaseBeam">
-    <defName>ChainBoom</defName>
-    <label>chain Boom</label>
-    <thingClass>VFEMech.TeslaProjectile</thingClass>
-    <drawOffscreen>true</drawOffscreen>
-    <graphicData>
-      <texPath>Effects/Red_Laser</texPath>
-      <shaderType>MoteGlow</shaderType>
-      <graphicClass>Graphic_Flicker</graphicClass>
-      <drawSize>(0.1, 0.5)</drawSize>
-    </graphicData>
-    <projectile>
-      <damageDef>LaserBlast</damageDef>
-      <damageAmountBase>1</damageAmountBase>
-      <explosionRadius>2</explosionRadius>
-      <speed>700</speed>
-      <ai_IsIncendiary>false</ai_IsIncendiary>
-    </projectile>
-    <modExtensions>
-      <li Class="VFEMech.TeslaChainingProps">
-        <maxBounceCount>3</maxBounceCount>
-        <damageDef>EMP</damageDef>
-        <explosionDamageDef>LaserBlast</explosionDamageDef>
-				<impactRadius>2</impactRadius>
-        <targetFriendly>false</targetFriendly>
-        <addFire>false</addFire>
-        <bounceRange>5</bounceRange>
-        <maxLifetime>1</maxLifetime>
-        <impactSound>Explosion_EMP_Quiet</impactSound>
-      </li>
-      <li Class="VFECore.ProjectileExtension">
-        <flashIntensity>1</flashIntensity>
-        <hitFleck>LaserBlast_Fleck</hitFleck>
-      </li>
-    </modExtensions>
-  </ThingDef>
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_UltraGun</defName>
@@ -351,6 +245,25 @@
             <clipPath>Weapons/Laser3</clipPath>
           </li>
         </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Shot_PhotonModulator</defName>
+    <sustain>false</sustain> 
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode> 
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused> 
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapons/Laser4</clipPath>
+          </li>
+        </grains>
+        <volumeRange>10~20</volumeRange>
       </li>
     </subSounds>
   </SoundDef>
