@@ -462,8 +462,6 @@
         <warmupTime>0.1</warmupTime>
         <range>50</range>
         <minRange>40</minRange>
-        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
-        <burstShotCount>1</burstShotCount>
         <soundCast>Shot_PhotonModulator</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>15</muzzleFlashScale>
