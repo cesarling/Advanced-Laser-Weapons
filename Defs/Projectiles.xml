@@ -109,9 +109,7 @@
     <makesAnimalsFlee>true</makesAnimalsFlee>
     <defaultDamage>1</defaultDamage>
     <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
-    <!-- <explosionCellFleck>BlastEMP</explosionCellFleck> -->
     <explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
-    <!-- <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck> -->
     <soundExplosion>Explosion_EMP_Quiet</soundExplosion>
   </DamageDef>
 
@@ -129,18 +127,6 @@
 			<renderInstanced>true</renderInstanced>
     </graphicData>
   </FleckDef>
-
-  <!-- <FleckDef ParentName="FleckBase_Thrown">
-    <defName>BloodborneRemake_SparkYellow</defName>
-    <graphicData>
-      <texPath>Effects/BloodborneRemake_SparkYellow</texPath>
-      <shaderType>MoteGlow</shaderType>
-    </graphicData>
-    <altitudeLayer>MoteOverhead</altitudeLayer>
-    <fadeInTime>0.05</fadeInTime>
-    <solidTime>0.05</solidTime>
-    <fadeOutTime>0.3</fadeOutTime>
-  </FleckDef> -->
   
   <FleckDef ParentName="FleckBase_RandomGraphic">
     <defName>Fleck_Mini_Vaporize</defName>
@@ -306,22 +292,4 @@
     </subSounds>
   </SoundDef>
 
-  <!-- <SoundDef>
-    <defName>GunTail_SolarScorchCannon</defName>  
-    <context>MapOnly</context> 
-    <maxVoices>2</maxVoices>  
-    <maxSimultaneous>1</maxSimultaneous>  
-    <subSounds>
-      <li>
-        <onCamera>True</onCamera>      
-        <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapons/LaserTwo</clipFolderPath>
-          </li>
-        </grains>      
-        <volumeRange>38.23529~37.05882</volumeRange>      
-        <pitchRange>0.9082352~1.091765</pitchRange>
-      </li>
-    </subSounds>
-  </SoundDef> -->
 </Defs>

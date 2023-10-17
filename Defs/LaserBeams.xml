@@ -12,8 +12,6 @@
     <ThingDef ParentName="BaseBeam">
         <defName>VPE_LaserBlast</defName>
         <label>Laser blast</label>
-        <!-- <thingClass>VFEMech.TeslaProjectile</thingClass>
-        <drawOffscreen>true</drawOffscreen> -->
         <graphicData>
           <texPath>Effects/LaserBlastBeam</texPath>
           <graphicClass>Graphic_Single</graphicClass>
@@ -27,12 +25,6 @@
           <explosionRadius>2</explosionRadius>
           <soundExplode>Explosion_EMP_Quiet</soundExplode>
         </projectile>
-        <!-- <modExtensions>
-          <li Class="VFECore.ProjectileExtension">
-            <flashIntensity>7</flashIntensity>
-            <hitFleck>LaserBlast_Fleck</hitFleck>
-          </li>
-        </modExtensions> -->
       </ThingDef>
 
     
@@ -58,8 +50,6 @@
           <li Class="VFEMech.TeslaChainingProps">
             <maxBounceCount>2000</maxBounceCount>
             <damageDef>LaserBlast</damageDef>
-            <!-- <explosionDamageDef>LaserBlast</explosionDamageDef>
-                    <impactRadius>4</impactRadius> -->
             <targetFriendly>false</targetFriendly>
             <addFire>false</addFire>
             <bounceRange>20</bounceRange>
