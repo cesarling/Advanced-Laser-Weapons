@@ -10,6 +10,6 @@
     <version>2023.10.17</version>
   
     <!-- These links wire up the new version available alert in Mod Manager -->
-    <!-- <manifestUri></manifestUri> -->
+    <manifestUri>https://raw.githubusercontent.com/cesarling/Advanced-Laser-Weapons/main/Defs/Manifest.xml</manifestUri>
     <downloadUri>https://github.com/cesarling/Advanced-Laser-Weapons/releases/tag/v1.0.0</downloadUri>
   </Manifest>
