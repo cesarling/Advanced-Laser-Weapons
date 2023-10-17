@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <ThingDef ParentName="BaseHumanMakeableGun">
+  <!-- <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>ALW_UltraGun</defName>
     <label>UltraGun</label>
     <description>A pulse-charged rail-assisted lance weapon. It fires a three shots at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
@@ -72,7 +72,7 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
-  </ThingDef>
+  </ThingDef> -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>ALW_LaserBlaster</defName>
@@ -130,7 +130,7 @@
         <range>25.2</range>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
-        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCast>Shot_LaserBlaster</soundCast>
         <!-- <soundCastTail>GunTail_Heavy</soundCastTail> -->
         <muzzleFlashScale>9</muzzleFlashScale>
         <forcedMissRadius>2</forcedMissRadius>
@@ -229,8 +229,9 @@
     <description>Firing three electrifying lasers with chain lightning, this not only inflicts relentless damage to distant foes but also culminates in explosive annihilation upon impact.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
-      <texPath>Things/PlaceHolderGuns/SDGunTest1</texPath>
+      <texPath>Things/Real/ScifiGun4</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.8, 1.8)</drawSize>
     </graphicData>
     <soundInteract>Interact_ChargeLance</soundInteract>
     <thingSetMakerTags>
@@ -278,7 +279,7 @@
         <range>35.2</range>
         <burstShotCount>7</burstShotCount>
         <ticksBetweenBurstShots>35</ticksBetweenBurstShots>
-        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCast>Shot_ChainBoomer</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -305,7 +306,7 @@
     <graphicData>
       <!-- <texPath>Things/PlaceHolderGuns/SDGunTest2</texPath> -->
       <texPath>Things/Real/ScifiGun2</texPath>
-      <drawSize>(1.2, 1.2)</drawSize>
+      <drawSize>(1.8, 1.8)</drawSize>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Shot_SolarScorchCannon</soundInteract>
@@ -449,7 +450,7 @@
       <displayPriority>210</displayPriority>
     </recipeMaker>
     <costList>
-      <Shell_Incendiary>36</Shell_Incendiary>
+      <Shell_AntigrainWarhead>1</Shell_AntigrainWarhead>
       <Steel>180</Steel>
       <Plasteel>220</Plasteel>
       <ComponentSpacer>18</ComponentSpacer>
@@ -520,7 +521,7 @@
         <warmupTime>0.1</warmupTime>
         <range>4.99</range>
         <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-        <burstShotCount>20</burstShotCount>
+        <burstShotCount>40</burstShotCount>
         <soundCast>Shot_PhotonModulator</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
