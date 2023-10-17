@@ -268,6 +268,44 @@
     </subSounds>
   </SoundDef>
 
+  <SoundDef>
+    <defName>Shot_LaserBlaster</defName>
+    <sustain>false</sustain> 
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode> 
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused> 
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapons/Laser5</clipPath>
+          </li>
+        </grains>
+        <volumeRange>10~20</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Shot_ChainBoomer</defName>
+    <sustain>false</sustain> 
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode> 
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused> 
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapons/Laser6</clipPath>
+          </li>
+        </grains>
+        <volumeRange>10~20</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
   <!-- <SoundDef>
     <defName>GunTail_SolarScorchCannon</defName>  
     <context>MapOnly</context> 
