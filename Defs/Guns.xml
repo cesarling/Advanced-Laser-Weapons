@@ -472,6 +472,8 @@
       </li>
     </tools>
     <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>      
+      <li Class="CompProperties_Styleable"></li>
       <li Class="MVCF.Comps.CompProperties_VerbProps">
         <compClass>CompEquippable</compClass>
         <verbProps>
